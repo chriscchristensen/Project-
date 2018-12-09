@@ -77,9 +77,20 @@ void roster::parseAdd(string datarow)
 	}
 }
 
-void roster::print_All()
+void roster::remove(int studentID)
 {
-	for (int i = 0; i <= this->lastIndex; i++) (this->classRosterArray)[i]->print();
+	string ID;
+	cout << "Enter the student ID you wish to delete: " << endl;
+	cin >> ID;
+	for (int i = 0; i < numStudents; ++i) {
+		if (studentData[i] == ID) {
+			swap(studentData[i], studentData[numStudents - 1]);
+			
+		}
+		else {
+			cout << "Such a student with this ID was not found.";
+		}
+	}
 }
 
 bool roster::remove(string studentID)
