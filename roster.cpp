@@ -77,7 +77,7 @@ void roster::parseAdd(string datarow)
 	}
 }
 
-void roster::remove(int studentID)
+void roster::remove(string studentID)
 {
 	string ID;
 	cout << "Enter the student ID you wish to delete: " << endl;
