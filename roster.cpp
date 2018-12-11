@@ -79,16 +79,12 @@ void roster::parseAdd(string datarow)
 
 void roster::remove(string studentID)
 {
-	string ID;
-	cout << "Enter the student ID you wish to delete: " << endl;
-	cin >> ID;
-	for (int i = 0; i < numStudents; ++i) {
-		if (studentData[i] == ID) {
-			swap(studentData[i], studentData[numStudents - 1]);
-			
-		}
-		else {
-			cout << "Such a student with this ID was not found.";
+for (int i = 0; i < numStudents; ++i) {
+		if (studentID == classRosterArray[i]->getstudentID()) 
+		{
+			delete (classRosterArray[i]);
+			classRosterArray[i] = classRosterArray[lastIndex];
+			lastIndex--;
 		}
 	}
 }
@@ -118,5 +114,12 @@ roster::~roster()
 }
 
 int main() {
+	cout << "Scripting and Programming - Applications - C867. Language used is C++. My student ID is 000791308. my name is Christopher Christensen \n";
+	roster *ros = new roster(5);
+	for (int i = 0; i < ros->capacity; ++i) {
+		ros->parseAdd(studentData[i]);
+	}
+	ros->print_All();
+	system("pause");
 	return 0;
 }
