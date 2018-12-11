@@ -114,7 +114,7 @@ roster::~roster()
 }
 
 int main() {
-	cout << "Scripting and Programming - Applications - C867. Language used is C++. My student ID is 000791308. my name is Christopher Christensen \n";
+	cout << "Scripting and Programming - Applications - C867. Language used is C++. My student ID is 000791308. my name is Chris Christensen \n";
 	roster *ros = new roster(5);
 	for (int i = 0; i < ros->capacity; ++i) {
 		ros->parseAdd(studentData[i]);
