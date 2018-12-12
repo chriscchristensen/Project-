@@ -88,12 +88,6 @@ for (int i = 0; i < numStudents; ++i) {
 		}
 	}
 }
-
-bool roster::remove(string studentID)
-{
-	return false;
-}
-
 void roster::add(string studenID, string firstName, string lastName, string email, int age, int d1, int d2, int d3, DegreeType type)
 {
 	classRosterArray[lastIndex]->setstudentID(studenID);
